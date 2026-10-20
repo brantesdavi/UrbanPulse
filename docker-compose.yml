@@ -9,3 +9,9 @@ services:
 
     volumes:
       - ./infrastructure/mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+  kafka:
+    image: apache/kafka:4.2.2
+    container_name: urbanpulse-kafka
+
+    ports:
+      - "9092:9092"
